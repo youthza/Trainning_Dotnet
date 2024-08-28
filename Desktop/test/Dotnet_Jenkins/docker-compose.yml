@@ -1,0 +1,12 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+version: '3.4'
+
+services:
+  dotnetjenkins:
+    image: dotnetjenkins
+    build:
+      context: .
+      dockerfile: Dotnet_Jenkins/Dockerfile
+    ports:
+      - 8088:8088
